@@ -1,0 +1,23 @@
+<p>
+<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+<div expr:id='&quot;summary&quot; + data:post.id'><data:post.body/
+></div>
+<script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);</script>
+<div class='readmore-wrap'>
+<a class='readmore' expr:href='data:post.url'>Read More</a>
+</div>
+</b:if>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;item&quot;'><data:post.body/></b:if>
+
+<b:if cond='data:blog.pageType == &quot;static_page&quot;'><data:post.body/></b:if></p>
+
+
+<!--Paste these lines in place of the deleted lines above:-->
+
+<p>
+<data:post.body/>
+</p>
+
+Cheers.
